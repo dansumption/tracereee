@@ -1,3 +1,3 @@
-const tracert = require('../js/tracery/traceryCore');
+// const tracert = require('../js/tracery/traceryCore');
 
-console.dir(tracery);
+// console.dir(tracery);

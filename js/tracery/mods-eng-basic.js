@@ -14,7 +14,7 @@ function escapeRegExp(str) {
 	return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
 }
 
-var baseEngModifiers = {
+baseEngModifiers = {
 
 	replace : function(s, params) {
 		//http://stackoverflow.com/questions/1144783/replacing-all-occurrences-of-a-string-in-javascript
