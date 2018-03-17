@@ -4,6 +4,7 @@
   "description": "JavaScript implementation of Tracery.io",
   "main": "src/index.js",
   "scripts": {
+    "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,9 +12,14 @@
     "url": "git+https://github.com/dansumption/tracery.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/dansumption/tracery/issues"
   },
-  "homepage": "https://github.com/dansumption/tracery#readme"
+  "homepage": "https://github.com/dansumption/tracery#readme",
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
 }

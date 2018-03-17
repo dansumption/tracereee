@@ -2,7 +2,7 @@
  * @author Kate
  */
 
-var tracery = function() {
+tracery = function() {
 	var rng = Math.random;
 
 	var setRng = function setRng(newRng) {
