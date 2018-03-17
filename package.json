@@ -7,7 +7,15 @@
     "build": "webpack --mode development",
     "test": "node test/test.js",
     "lint": "eslint src/ test/",
-    "lint:fix": "npm run lint --fix"
+    "lint:fix": "npm run lint --fix",
+    "prettify": "prettier --write --tab-width 4 \"src/**/*.js\"",
+    "precommit": "lint-staged && npm test"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run prettify",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,6 +30,8 @@
   "devDependencies": {
     "eslint": "^4.19.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "lint-staged": "^7.0.0",
+    "prettify": "^0.1.7",
     "tape": "^4.9.0",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12"
