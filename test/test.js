@@ -1,6 +1,6 @@
 const tape = require("tape");
 const tracery = require("../src/tracery");
-require("../js/tracery/mods-eng-basic");
+const baseEngModifiers = require("../src/mods-eng-basic");
 
 const grammar = tracery.createGrammar({
     deepHash: ["\\#00FF00", "\\#FF00FF"],
@@ -76,7 +76,6 @@ const grammar = tracery.createGrammar({
     twoWords: ["angry bear", "wily fox"]
 });
 
-/* global baseEngModifiers */
 grammar.addModifiers(baseEngModifiers);
 tracery.setRng(() => 0);
 
