@@ -72,7 +72,8 @@ const grammar = tracery.createGrammar({
         "[occupation:baker][didStuff:baked bread,decorated cupcakes,folded dough,made croissants,iced a cake]",
         "[occupation:warrior][didStuff:fought #monster.a#,saved a village from #monster.a#,battled #monster.a#,defeated #monster.a#]"
     ],
-    origin: ["#[#setPronouns#][#setOccupation#][hero:#name#]story#"]
+    origin: ["#[#setPronouns#][#setOccupation#][hero:#name#]story#"],
+    twoWords: ["angry bear", "wily fox"]
 });
 
 /* global baseEngModifiers */
@@ -185,6 +186,43 @@ const tests = {
         src: "[pet:#animal#]#recursiveStory#",
         expect:
             "The bear opened a book about a quiet bear. Cheri was a great baker, and this song tells of their adventure. Cheri baked bread, then they baked bread, then they went home to read a book. The bear closed the book."
+    },
+
+    // English modifiers
+
+    s: {
+        src: "#animal.s#",
+        expect: "bears"
+    },
+
+    firstS: {
+        src: "#twoWords.firstS#",
+        expect: "angries bear"
+    },
+
+    capitalize: {
+        src: "#animal.capitalize#",
+        expect: "Bear"
+    },
+
+    capitalizeAll: {
+        src: "#nonrecursiveStory.capitalizeAll#",
+        expect: "The Bear Went To The Beach."
+    },
+
+    capitalizeFirst: {
+        src: "#twoWords.capitalize#",
+        expect: "Angry bear"
+    },
+
+    a: {
+        src: "#animal.a#",
+        expect: "a bear"
+    },
+
+    ed: {
+        src: "#animal.ed#",
+        expect: "beared"
     },
 
     // Errors
